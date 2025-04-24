@@ -7,61 +7,73 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ===== NAVBAR RESPONSIVE + BURGER ===== -->
   <header>
     <nav>
       <h1>EiProX</h1>
-      <ul>
+      <!-- Icône burger pour les petits écrans -->
+      <div class="burger" onclick="toggleMenu()">☰</div>
+
+      <!-- Liens de navigation -->
+      <ul id="navLinks">
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <h2>Développeur </h2>
+
+    <!-- Texte d'accroche -->
+    <div class="hero"> 
+      <h2>Développeur</h2>
       <p>Passionné, curieux, et toujours prêt à apprendre !</p>
     </div>
   </header>
 
+  <!-- ===== À PROPOS ===== -->
   <section id="about">
     <h2>À propos de moi</h2>
-    <p>Je suis étudiant en BTS CIEL IR, avec un fort intérêt pour les technologies modernes, la cybersécurité et la création d'applications utiles. Je combine rigueur, créativité et bonne humeur !</p>
+    <p>Étudiant en BTS CIEL IR, passionné par la cybersécurité et le développement web. J'aime créer des solutions utiles avec le sourire !</p>
   </section>
 
+  <!-- ===== COMPÉTENCES ===== -->
   <section id="skills">
     <h2>Compétences</h2>
     <div class="skills-container">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">LUA</div>
-      <div class="skill">C++</div>
-      <div class="skill">C</div>
-      <div class="skill">MySQL</div>
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="LUA">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
     </div>
   </section>
 
+  <!-- ===== PROJETS ===== -->
   <section id="projects">
     <h2>Mes Projets</h2>
     <div class="projects-container">
       <div class="project-card">
         <h3>The Purge</h3>
-        <p>Serveur FiveM pvp réalisé en LUA.</p>
-        <a href="https://the-purge.tebex.io/" target="_blank">Site Web du Serveur.</a>
+        <p>Serveur FiveM PVP développé en LUA avec Tebex.</p>
+        <a href="https://the-purge.tebex.io/" target="_blank">Voir le site</a>
       </div>
       <div class="project-card">
         <h3>MasterMind</h3>
-        <p>Petit Projet durant mes études où nous devions recréer un jeu en c++/c.</p>
-        <a href="https://github.com/EiProX/MasterMind" target="_blank">Voir sur GitHub
-          <img src="./assets/icons/github.png" width="20px">
+        <p>Jeu console créé en C/C++ dans le cadre de mes études.</p>
+        <a href="https://github.com/EiProX/MasterMind" target="_blank">
+          Voir sur GitHub <img src="./assets/icons/github.png" width="20px" alt="GitHub icon">
         </a>
       </div>
     </div>
   </section>
 
+  <!-- ===== CONTACT ===== -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Tu veux discuter ou collaborer ? Contacte-moi :</p>
+    <p>Tu veux bosser avec moi ? Envoie-moi un message :</p>
     <div class="contact-links">
       <a href="mailto:praultgab@gmail.com">
         <img src="assets/icons/email.png" alt="Email">
@@ -71,8 +83,10 @@
         <img src="assets/icons/github.png" alt="GitHub">
         <span>GitHub</span>
       </a>
+    </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2025 EiProX. Tous droits réservés.</p>
   </footer>
