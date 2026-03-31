@@ -1,19 +1,36 @@
-// Scroll fluide vers les ancres
+const navLinks = document.getElementById('navLinks');
+const burger = document.querySelector('.burger');
+const yearTarget = document.getElementById('currentYear');
+
+if (yearTarget) {
+  yearTarget.textContent = new Date().getFullYear();
+}
+
+function toggleMenu() {
+  navLinks.classList.toggle('active');
+  const expanded = navLinks.classList.contains('active');
+  burger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (!target) return;
 
-    // Ferme le menu mobile après clic
-    const navLinks = document.getElementById('navLinks');
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
     if (navLinks.classList.contains('active')) {
       navLinks.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
     }
   });
 });
 
-// Fonction pour toggle le menu burger
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
-}
+document.addEventListener('click', (event) => {
+  const clickedInsideNav = event.target.closest('nav');
+  if (!clickedInsideNav && navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+});
