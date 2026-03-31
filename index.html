@@ -2,20 +2,19 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EiProX - Développeur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio d'un étudiant en BTS CIEL IR, orienté développement web, cybersécurité, automatisation et administration système." />
+  <title>EiProX - Développeur & Cybersécurité</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- ===== NAVBAR RESPONSIVE + BURGER ===== -->
   <header>
     <nav>
-      <h1>EiProX</h1>
-      <!-- Icône burger pour les petits écrans -->
-      <div class="burger" onclick="toggleMenu()">☰</div>
-
-      <!-- Liens de navigation -->
+      <a class="brand" href="#top">EiProX</a>
+      <div class="burger" onclick="toggleMenu()" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">☰</div>
       <ul id="navLinks">
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
@@ -24,73 +23,192 @@
       </ul>
     </nav>
 
-    <!-- Texte d'accroche -->
-    <div class="hero"> 
-      <h2>Développeur</h2>
-      <p>Passionné, curieux, et toujours prêt à apprendre !</p>
+    <div class="hero" id="top">
+      <div class="hero-content">
+        <span class="eyebrow">BTS CIEL IR • Développement • Cybersécurité</span>
+        <h1>Je crée des projets utiles, concrets et sécurisés.</h1>
+        <p>
+          Étudiant passionné par le développement web, la cybersécurité et l'automatisation.
+          J'aime construire des outils pratiques, propres et pensés pour de vrais usages terrain.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Voir mes projets</a>
+          <a class="btn btn-secondary" href="https://github.com/EiProX" target="_blank" rel="noopener noreferrer">Mon GitHub</a>
+        </div>
+        <div class="hero-tags">
+          <span>Node.js</span>
+          <span>PowerShell</span>
+          <span>JavaScript</span>
+          <span>MySQL</span>
+          <span>Python</span>
+          <span>RGPD</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- ===== À PROPOS ===== -->
-  <section id="about">
-    <h2>À propos de moi</h2>
-    <p>Étudiant en BTS CIEL IR, passionné par la cybersécurité et le développement web. J'aime créer des solutions utiles avec le sourire !</p>
-  </section>
-
-  <!-- ===== COMPÉTENCES ===== -->
-  <section id="skills">
-    <h2>Compétences</h2>
-    <div class="skills-container">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="LUA">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-      <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-    </div>
-</section>
-
-
-  <!-- ===== PROJETS ===== -->
-  <section id="projects">
-    <h2>Mes Projets</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>The Purge</h3>
-        <p>Serveur FiveM PVP développé en LUA avec Tebex.</p>
-        <a href="https://the-purge.tebex.io/" target="_blank">Voir le site</a>
+  <main>
+    <section id="about">
+      <div class="section-heading">
+        <span class="section-kicker">Profil</span>
+        <h2>À propos de moi</h2>
       </div>
-      <div class="project-card">
-        <h3>MasterMind</h3>
-        <p>Jeu console créé en C/C++ dans le cadre de mes études.</p>
-        <a href="https://github.com/EiProX/MasterMind" target="_blank">
-          Voir sur GitHub <img src="./assets/icons/github.png" width="20px" alt="GitHub icon">
-        </a>
+      <div class="about-card">
+        <p>
+          Je suis étudiant en <strong>BTS CIEL IR</strong>, avec un intérêt marqué pour la
+          <strong>cybersécurité</strong>, le <strong>développement web</strong> et l'<strong>automatisation système</strong>.
+          Au fil de mes projets, j'ai appris à concevoir des solutions locales et web, à manipuler des bases de données,
+          à développer des scripts d'administration et à intégrer les bonnes pratiques de sécurité et de conformité.
+        </p>
+        <p>
+          Je travaille aussi bien sur des projets scolaires que sur des réalisations concrètes liées à la
+          sensibilisation, au support informatique et à la création d'outils utiles au quotidien.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Tu veux bosser avec moi ? Envoie-moi un message :</p>
-    <div class="contact-links">
-      <a href="mailto:praultgab@gmail.com">
-        <img src="assets/icons/email.png" alt="Email">
-        <span>Email</span>
-      </a>
-      <a href="https://github.com/EiProX" target="_blank">
-        <img src="assets/icons/github.png" alt="GitHub">
-        <span>GitHub</span>
-      </a>
-    </div>
-  </section>
+    <section id="skills">
+      <div class="section-heading">
+        <span class="section-kicker">Expertise</span>
+        <h2>Compétences</h2>
+      </div>
 
-  <!-- ===== FOOTER ===== -->
+      <div class="skills-grid">
+        <article class="info-card">
+          <h3>Développement web</h3>
+          <p>Conception d'interfaces simples, lisibles et responsives pour présenter des projets ou répondre à des besoins internes.</p>
+          <div class="skills-container">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          </div>
+        </article>
+
+        <article class="info-card">
+          <h3>Scripting & automatisation</h3>
+          <p>Création de scripts et d'outils pour le diagnostic, l'analyse, la maintenance et l'assistance sur postes Windows.</p>
+          <div class="skills-container">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+          </div>
+        </article>
+
+        <article class="info-card">
+          <h3>Systèmes & données</h3>
+          <p>Gestion d'environnements locaux, logique de base de données, développement d'outils connectés à une base et respect des contraintes de sécurité.</p>
+          <div class="skills-container">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+            <img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+          </div>
+        </article>
+      </div>
+
+      <div class="pill-list">
+        <span>Responsive design</span>
+        <span>Node.js</span>
+        <span>PowerShell</span>
+        <span>Base de données</span>
+        <span>Sensibilisation cyber</span>
+        <span>Outils internes</span>
+        <span>Conformité RGPD</span>
+        <span>Support technique</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <span class="section-kicker">Réalisations</span>
+        <h2>Mes projets</h2>
+      </div>
+
+      <div class="projects-container">
+        <article class="project-card featured-project">
+          <div class="project-badge">Projet BTS</div>
+          <h3>Badgeuse web pour remplacer Pronote</h3>
+          <p>
+            Développement d'un système de badgeuse avec <strong>serveur web</strong> et <strong>base de données</strong>
+            pour proposer une alternative interne à Pronote. Le projet a été pensé en tenant compte des
+            contraintes de <strong>confidentialité</strong> et du <strong>RGPD</strong>, même dans un environnement local.
+          </p>
+          <ul>
+            <li>Interface web de gestion</li>
+            <li>Base de données locale</li>
+            <li>Approche structurée et conforme aux bonnes pratiques</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Cybersécurité</div>
+          <h3>Simulation de phishing & page de prévention</h3>
+          <p>
+            Réalisation d'une page de simulation de phishing et d'une page de sensibilisation sans collecte d'informations,
+            utilisées dans un cadre de prévention pour sensibiliser des lycéens et collégiens pendant un stage à l'<strong>académie Orléans-Tours</strong>.
+          </p>
+          <ul>
+            <li>Aucune collecte de données</li>
+            <li>Objectif pédagogique et préventif</li>
+            <li>Sensibilisation aux réflexes cyber</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Automatisation</div>
+          <h3>Outil PowerShell de scan et désinfection</h3>
+          <p>
+            Développement d'un outil en <strong>PowerShell</strong> pour scanner des postes Windows,
+            détecter des anomalies et assister les opérations de désinfection et de remise en état.
+          </p>
+          <ul>
+            <li>Analyse automatisée des PC</li>
+            <li>Gain de temps en maintenance</li>
+            <li>Utilisation pratique en support informatique</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Personnel</div>
+          <h3>The Purge</h3>
+          <p>Serveur FiveM PVP développé en Lua avec intégration Tebex et logique orientée expérience utilisateur.</p>
+          <a href="https://the-purge.tebex.io/" target="_blank" rel="noopener noreferrer">Voir le site</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-badge">Études</div>
+          <h3>MasterMind</h3>
+          <p>Jeu console réalisé en C/C++ dans le cadre de mes études, avec travail sur la logique, les conditions et l'expérience utilisateur en terminal.</p>
+          <a href="https://github.com/EiProX/MasterMind" target="_blank" rel="noopener noreferrer">
+            Voir sur GitHub <img src="./assets/icons/github.png" width="20" height="20" alt="GitHub icon">
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-heading">
+        <span class="section-kicker">Échange</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-card">
+        <p>Tu veux échanger sur un projet, un stage, une alternance ou simplement découvrir mon travail ?</p>
+        <div class="contact-links">
+          <a href="mailto:praultgab@gmail.com">
+            <img src="assets/icons/email.png" alt="Email">
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/EiProX" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/github.png" alt="GitHub">
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>© 2025 EiProX. Tous droits réservés.</p>
+    <p>© <span id="currentYear"></span> EiProX. Tous droits réservés.</p>
   </footer>
 
   <script src="script.js"></script>
